@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<style>
+    * {
+        box-sizing: border-box;
+        /* makes all the width/heights include padding in their calculation */
+    }
+    
+    body {
+        color: black;
+        font-family: Georgia;
+        margin: 0;
+        /* removes the 8px gap around the document edge */
+    }
+    
+    header {
+        background-color: rgb(252, 212, 225);
+        display: flex;
+        /* flex is like an auto layout */
+        flex-direction: row;
+        /* by default flex wants to show things in a column */
+        justify-content: space-between;
+        /* makes a flex container put empty space between elements */
+        width: 100%;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+    
+    nav a {
+        font-family: 'Lato', sans-serif;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 17px 20px;
+        text-decoration: none;
+        display: inline-block;
+        /* so that they don't stack on top of each other */
+    }
+    
+    nav a:hover:not(.active) {
+        background-color: palevioletred;
+    }
+    
+    .column {
+        /* Three image containers (use 25% for four, and 50% for two, etc) */
+        float: left;
+        width: 33.33%;
+        padding: 5px;
+    }
+    
+    .row::after {
+        /* Clear floats after image containers */
+        content: "";
+        clear: both;
+        display: table;
+    }
+    
+    h3 {
+        font-family: 'arial';
+        position: 'absolute';
+        text-align: center;
+        color: black
+    }
+    
+    p {
+        text-align: center;
+    }
+    
+    footer {
+        background-color: black;
+        color: lightgray;
+        text-align: right;
+        padding: 20px;
+        width: 100%;
+        font-size: small;
+        font-family: arial;
+        position: absolute;
+        top: 800px;
+        display: block;
+    }
+    
+    div.container {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    button.btn {
+        background: transparent;
+        color: rgb(252, 212, 225);
+        border: 2px solid rgb(252, 212, 225);
+        font-size: 15px;
+        letter-spacing: 1px;
+        padding: 25px 80px;
+        text-transform: capitalize;
+        cursor: pointer;
+        display: inline-block;
+        margin: 15px 30px;
+        -webkit-transition: all 0.4s;
+        -moz-transition: all 0.4s;
+        transition: all 0.4s;
+    }
+    
+    button.btn-1:hover {
+        background-color: rgb(252, 212, 225);
+        color: white;
+        -webkit-transition: all 0.4s;
+        -moz-transition: all 0.4s;
+        transition: all 0.4s;
+    }
+</style>
+
+<body>
+    <header>
+        <div><img src="IPT Aesthetics/Logo.png" width="30%"></div>
+        <nav>
+            <link rel="preconnect" href="https://fonts.gstatic.com">
+            <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+            <a href="Website.html">Home</a>
+            <a href="Question 1.html">Quiz</a>
+            <a href="About.html">About This Site</a>
+        </nav>
+    </header>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+    <h3>What sort of fantasy world would you like to escape to?</h3> <br>
+    <div class="row">
+        <div class="column">
+            <div class="container"></div>
+            <img src="IPT Aesthetics/witch.jpg" alt="Witch" style="width:100%"> <br>
+            <a href="conclusion_witchcore.html"><button class="btn btn-1">
+                A place that is almost entirely populated by witches complete with potions and spells</button>
+            </a>
+        </div>
+        <div class="column">
+            <img src="IPT Aesthetics/fantasy.jpg" alt="Adventure" style="width:100%"> <br>
+            <a href="conclusion_fantasycore.html"> <button class="btn btn-1">
+                A world run by majestic creatures, with medieval-style adventures!</button>
+            </a>
+        </div>
+        <div class="column">
+            <img src="IPT Aesthetics/fairycore.jpg" alt="Fairy" style="width:100% "> <br>
+            <a href="conclusion_fairycore.html"> <button class="btn btn-1">
+                A magical society of fairies, elves and everything in between</button>
+            </a>
+        </div>
+    </div>
+    <footer>
+        <p>© 2021 Aesthetic Finder by Kelly Dang - All Rights Reserved</p>
+    </footer>
+</body>
+
+</html>

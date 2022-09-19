@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<style>
+    * {
+        box-sizing: border-box;
+        /* makes all the width/heights include padding in their calculation */
+    }
+    
+    body {
+        color: black;
+        font-family: Georgia;
+        margin: 0;
+        text-align: center;
+        /* removes the 8px gap around the document edge */
+    }
+    
+    header {
+        background-color: rgb(252, 212, 225);
+        display: flex;
+        /* flex is like an auto layout */
+        flex-direction: row;
+        /* by default flex wants to show things in a column */
+        justify-content: space-between;
+        /* makes a flex container put empty space between elements */
+        width: 100%;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+    
+    nav a {
+        font-family: 'Lato', sans-serif;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 17px 20px;
+        text-decoration: none;
+        display: inline-block;
+        /* so that they don't stack on top of each other */
+    }
+    
+    nav a:hover:not(.active) {
+        background-color: palevioletred;
+    }
+    
+    .split {
+        display: flex;
+        /* auto layout again */
+        flex-direction: row;
+        /* in rows because you want 2 50% width boxes */
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    .left,
+    .right {
+        padding-top: 20px;
+        width: 50%;
+    }
+    
+    .left {
+        background-color: white;
+    }
+    
+    .right {
+        background-color: rgb(244, 244, 244);
+        line-height: 1.6;
+    }
+    
+    .centered {
+        text-align: center;
+    }
+    
+    .word {
+        display: block;
+        /* block takes up the whole line it’s on. You can do this sometimes instead of using <br> to get a new line. 
+        block also lets you add margins and paddings. In-line block is essentially the same except it doesn't take the whole line.*/
+        margin-bottom: 8px;
+    }
+    
+    footer {
+        background-color: black;
+        color: lightgray;
+        text-align: centre;
+        padding: 20px;
+        width: 100%;
+        font-size: small;
+        font-family: arial;
+        position: absolute;
+        top: 800px;
+        display: block;
+    }
+    
+    .fixlogo {
+        position: relative;
+        left: -172px;
+    }
+    
+    button.btn {
+        background: transparent;
+        color: pink;
+        border: 2px solid pink;
+        font-size: 15px;
+        letter-spacing: 1px;
+        padding: 25px 80px;
+        text-transform: capitalize;
+        cursor: pointer;
+        display: inline-block;
+        margin: 15px 30px;
+        -webkit-transition: all 0.4s;
+        -moz-transition: all 0.4s;
+        transition: all 0.4s;
+    }
+    
+    button.btn-1:hover {
+        background-color: pink;
+        color: white;
+        -webkit-transition: all 0.4s;
+        -moz-transition: all 0.4s;
+        transition: all 0.4s;
+    }
+</style>
+
+<html>
+
+<body>
+    <header>
+        <div>
+            <div class="fixlogo"> <img src="IPT Aesthetics/Logo.png" alt="logo" width="30%"></div>
+        </div>
+        <nav>
+            <link rel="preconnect" href="https://fonts.gstatic.com">
+            <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+            <a href="Website.html">Home</a>
+            <a href="Question 1.html">Quiz</a>
+            <a href="About.html">About This Site</a>
+        </nav>
+    </header>
+    <div class="split">
+        <div class="left">
+            <div class="centered">
+                <h1>Aesthetic Finder</h1>
+                <p style=font-size:smaller> Find something pretty to theme your documents, <br> notes, bedroom and devices with </p>
+                <img src="IPT Aesthetics/Flower.jpg" alt="flower" width="69%">
+            </div>
+        </div>
+        <div class="right">
+            <div class="centered">
+                <h2>aesthetic<br> <span>/iːsˈθɛtɪk,ɛsˈθɛtɪk/</span></h2>
+                <br>
+                <hr>
+                <br>
+                <p><span class="word">➡ adjective</span> concerned with beauty or <br> the appreciation of beauty.</p> <br>
+
+                <p><span class="word">➡ noun</span> a set of principles underlying the work <br> of a particular artist or artistic movement.</p>
+                <br>
+                <hr>
+                <br>
+                <p>
+                    <a href="Question 1.html"> <button class="btn btn-1">Let's find what your ideal aesthetic is</button></a>
+                </p>
+                <br>
+                <br>
+                <br>
+                <br>
+            </div>
+        </div>
+        <div>
+        </div>
+        <footer>
+            <br> © 2021 Aesthetic Finder by Kelly Dang - All Rights Reserved
+            <br>
+            <br>
+        </footer>
+
+</body>
+
+</html>
