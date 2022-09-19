@@ -1,0 +1,10 @@
+proposallist = []
+art = 0
+while art != 3:
+  magazine = input("Magazine name: ")
+  if "art" in magazine.lower():
+    proposallist.append(magazine)
+    art = art + 1
+proposallist.sort()
+proposallist.reverse()
+print(f"Proposals: {proposallist}")
