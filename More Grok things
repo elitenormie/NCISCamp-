@@ -1,0 +1,20 @@
+print("Thanks all for coming to donut donation day!")
+donates_list = []
+total = 0
+donator = input("Who's next to donate? ")
+while donator:
+  money = float(input("How much are you donating? "))
+  if donator not in donates_list:
+    print(f'Thanks {donator}! A first donation of ${money:.2f}!')
+    donates_list.append(donator)
+    total = float(total + money)
+  elif donator in donates_list:
+    print(f'Another generous donation from {donator} of ${money:.2f}!')
+    total = float(total + money)
+  donator = input("Who's next to donate? ")
+
+print(f"That's it folks! We raised ${total:.2f}!")
+print("All thanks to our delicious donors:")
+donates_list.sort()
+for donater in donates_list:
+  print(f"🍩 {donater}")
